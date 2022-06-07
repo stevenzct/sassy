@@ -1,0 +1,47 @@
+$primaryBtn : rgb(177, 201, 41);
+$textcolor : rgb(173, 76, 76)  ;
+
+
+@mixin flexCenter($direction, $background) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: $direction;
+    background: $background ;
+    height: 100vh;
+
+}
+
+header{
+
+    @include flexCenter(column, orange);
+
+    // background: lightblue;
+    color: $textcolor;
+    height: 100vh;
+    
+
+    button{
+        background: $primaryBtn;
+
+        // hover
+        &:hover{
+            background: pink;
+        }
+    }
+
+    .text{
+        background-color: brown;
+        color: white;
+    }
+}
+
+
+.contact button {
+    background: $primaryBtn;
+
+  
+}
+.contact{
+    @include flexCenter(row, rgb(25, 110, 106));
+}
